@@ -45,7 +45,7 @@ makeCacheMatrix <- function(x = matrix()) { # input x will be a matrix
 
 cacheSolve <- function(x, ...) { # the input x is an object created by makeCacheMatrix
         
-        i <- x$getInverse()  # accesses the object 'x' and gets the value of the inverse of the matrix
+        cache <- x$getInverse()  # accesses the object 'x' and gets the value of the inverse of the matrix
         
         
         
