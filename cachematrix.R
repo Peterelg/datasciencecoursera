@@ -45,7 +45,7 @@ makeCacheMatrix <- function(x = matrix()) { # input x will be a matrix
 
 cacheSolve <- function(x, ...) { # the input x is an object created by makeCacheMatrix
         
-        cache <- x$getInverse()  # accesses the object 'x' and gets the value of the inverse of the matrix
+        i <- x$getInverse()  # accesses the object 'x' and gets the value of the inverse of the matrix
         
         
         
@@ -57,7 +57,7 @@ cacheSolve <- function(x, ...) { # the input x is an object created by makeCache
         
           
         data <- x$getMatrix()       # we reach this code only if x$getInverse() returned NULL
-        cache <- solve(data, ...)   # if i was NULL then we have to calculate the inverse
+        i <- solve(data, ...)   # if i was NULL then we have to calculate the inverse
         x$setInverse(i)             # store the calculated inverse value in x 
         i                           # return the inverse to the code that called this function
 }
